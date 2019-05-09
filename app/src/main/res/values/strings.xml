@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Nikisz</string>
+    <string name="main_top_textview_heading">Rajza po Nikiszu</string>
+    <string name="main_center_symbol">Center Symbol</string>
+    <string name="main_bottom_numberPercent">0%</string>
+
+    <string name="title_activity_atraction">AtractionActivity</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="museum_image_view_top_content">Museum ImageTop</string>
+    <string name="museum_textview_link">-----------------------------------------------------------------------------------------------------</string>
+
+    <string name="info_imageview_top_content">Info ImageTop</string>
+
+
+    <string name="technical_texvview_top">Dziedzictwo Kulturowe</string>
+    <string name="technical_textview_top_small">Osiedle Nikiszowiec</string>
+
+</resources>
