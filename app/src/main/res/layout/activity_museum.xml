@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/museum_textview_link" />
+            android:text="@string/line_one" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -119,6 +119,11 @@
                         android:textColor="#7b7676"
                         android:textSize="16sp"
                         android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/museum_textView_distance2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
 
                 </LinearLayout>
             </ScrollView>
