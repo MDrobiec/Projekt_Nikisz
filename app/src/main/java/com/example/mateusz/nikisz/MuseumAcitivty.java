@@ -1,5 +1,11 @@
 package com.example.mateusz.nikisz;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -16,6 +22,8 @@ public class MuseumAcitivty extends AppCompatActivity {
     private TextView museum_textView_localization;
     private TextView museum_textView_localization_place;
     private TextView museum_textView_localization_time;
+    private TextView museum_textView_distane;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +41,7 @@ public class MuseumAcitivty extends AppCompatActivity {
         museum_textView_localization = (TextView) findViewById(R.id.museum_textView_localization);
         museum_textView_localization_place = (TextView) findViewById(R.id.museum_textView_localization_place);
         museum_textView_localization_time = (TextView) findViewById(R.id.museum_textView_localization_time);
+        museum_textView_distane = (TextView) findViewById(R.id.museum_textView_distance2);
 
         museum_textView_topText.setText(rb.getString("museum_textView_topText"));
         museumTextViewSmall.setText(rb.getString("museum_textView_small"));
@@ -42,5 +51,6 @@ public class MuseumAcitivty extends AppCompatActivity {
         museum_textView_localization.setText(rb.getString("textView_localization"));
         museum_textView_localization_place.setText(rb.getString("textView_localization_place"));
         museum_textView_localization_time.setText(rb.getString("museum_textView_localization_time"));
+
     }
 }
