@@ -65,6 +65,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:paddingLeft="22dp"
+                        android:paddingRight="22dp"
                         android:textColor="#7b7676"
                         android:textSize="22sp"
                         android:textStyle="bold"/>
@@ -76,9 +77,9 @@
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="17dp"
-                        android:gravity="left"
+                        android:gravity="start"
                         android:textColor="#000000"
-                        android:textSize="18dp" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/museum_textView_information"
@@ -86,6 +87,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="15dp"
                         android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
                         android:textColor="#7b7676"
                         android:textSize="22sp"
                         android:textStyle="bold" />
@@ -95,6 +97,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingLeft="35dp"
+                        android:paddingRight="35dp"
                         android:paddingTop="10dp"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -106,6 +109,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
                         android:textColor="#7b7676"
                         android:textSize="16sp"
                         android:textStyle="bold" />
@@ -116,6 +120,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
                         android:textColor="#7b7676"
                         android:textSize="16sp"
                         android:textStyle="bold" />

@@ -52,5 +52,6 @@ public class MuseumAcitivty extends AppCompatActivity {
         museum_textView_localization_place.setText(rb.getString("textView_localization_place"));
         museum_textView_localization_time.setText(rb.getString("museum_textView_localization_time"));
 
+
     }
 }

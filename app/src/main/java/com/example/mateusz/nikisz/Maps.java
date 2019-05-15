@@ -48,7 +48,6 @@ public class Maps extends AppCompatActivity {
             return;
         }
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
-
     }
 
 }
