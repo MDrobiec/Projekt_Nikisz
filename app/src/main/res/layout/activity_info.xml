@@ -124,7 +124,7 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/show_distance"
+                            android:id="@+id/show_distance_button"
                             android:layout_width="150dp"
                             android:layout_height="40dp"
                             android:text="Pokaż dysans"

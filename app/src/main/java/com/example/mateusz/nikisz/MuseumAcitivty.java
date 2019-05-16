@@ -1,13 +1,9 @@
 package com.example.mateusz.nikisz;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.location.Location;
-import android.location.LocationListener;
-import android.location.LocationManager;
-import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ResourceBundle;
@@ -22,8 +18,9 @@ public class MuseumAcitivty extends AppCompatActivity {
     private TextView museum_textView_localization;
     private TextView museum_textView_localization_place;
     private TextView museum_textView_localization_time;
-    private TextView museum_textView_distane;
+    private TextView show_distance_textView;
 
+    private Button show_distance;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +38,7 @@ public class MuseumAcitivty extends AppCompatActivity {
         museum_textView_localization = (TextView) findViewById(R.id.museum_textView_localization);
         museum_textView_localization_place = (TextView) findViewById(R.id.museum_textView_localization_place);
         museum_textView_localization_time = (TextView) findViewById(R.id.museum_textView_localization_time);
-        museum_textView_distane = (TextView) findViewById(R.id.museum_textView_distance2);
+        show_distance_textView = (TextView) findViewById(R.id.show_distance_textView);
 
         museum_textView_topText.setText(rb.getString("museum_textView_topText"));
         museumTextViewSmall.setText(rb.getString("museum_textView_small"));
@@ -52,6 +49,14 @@ public class MuseumAcitivty extends AppCompatActivity {
         museum_textView_localization_place.setText(rb.getString("textView_localization_place"));
         museum_textView_localization_time.setText(rb.getString("museum_textView_localization_time"));
 
+        show_distance = (Button) findViewById(R.id.show_distance_button);
+        show_distance.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                show_distance_textView.setText("Działa");
+            }
+        });
 
     }
+
 }
