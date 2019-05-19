@@ -17,5 +17,6 @@
     <string name="technical_texvview_top">Dziedzictwo Kulturowe</string>
     <string name="technical_textview_top_small">Osiedle Nikiszowiec</string>
     <string name="name_button">Pokaż pozostały dystans do obiektu</string>
+    <string name="good">Działa</string>
 
 </resources>
