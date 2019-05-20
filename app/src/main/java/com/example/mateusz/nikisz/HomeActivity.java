@@ -1,40 +1,35 @@
 package com.example.mateusz.nikisz;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener{
-
-    private Button home_button_turistAtraction;
-    private Button home_button_turistInformation;
-    private Button home_button_museum;
-    private Button home_button_monumentialTrail;
-    private Button home_button_sportsEvent;
-    private Button home_button_history;
-    private Button home_button_maps;
-    private Button home_button_turistTrail;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        getSupportActionBar().hide();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            Objects.requireNonNull(getSupportActionBar()).hide();
+        }
 
         ResourceBundle rb = ResourceBundle.getBundle("textnikisz");
 
-        home_button_turistAtraction = (Button) findViewById(R.id.home_button_turistAtraction);
-        home_button_turistInformation = (Button) findViewById(R.id.home_button_turistInformation);
-        home_button_museum = (Button) findViewById(R.id.home_button_museum);
-        home_button_monumentialTrail = (Button) findViewById(R.id.home_button_monumentialTrail);
-        home_button_sportsEvent = (Button) findViewById(R.id.home_button_sportsEvent);
-        home_button_history = (Button) findViewById(R.id.home_button_history);
-        home_button_maps = (Button) findViewById(R.id.home_button_maps);
-        home_button_turistTrail = (Button) findViewById(R.id.home_button_turistTrail);
+        Button home_button_turistAtraction = findViewById(R.id.home_button_turistAtraction);
+        Button home_button_turistInformation =  findViewById(R.id.home_button_turistInformation);
+        Button home_button_museum = findViewById(R.id.home_button_museum);
+        Button home_button_monumentialTrail = findViewById(R.id.home_button_monumentialTrail);
+        Button home_button_sportsEvent = findViewById(R.id.home_button_sportsEvent);
+        Button home_button_history = findViewById(R.id.home_button_history);
+        Button home_button_maps = findViewById(R.id.home_button_maps);
+        Button home_button_turistTrail = findViewById(R.id.home_button_turistTrail);
 
         home_button_turistAtraction.setText(rb.getString("home_button_textView_turistAtraction"));
         home_button_turistInformation.setText(rb.getString("home_button_textView_turistInformation"));
