@@ -81,5 +81,13 @@ public class MuseumAcitivty extends AppCompatActivity {
                 finish();
             }
         });
+
+        Button show = findViewById(R.id.explore);
+        show.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
     }
 }

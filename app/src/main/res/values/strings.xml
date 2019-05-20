@@ -20,4 +20,6 @@
     <string name="good">Działa</string>
 
 
+    <string name="test">geo:50.24413278280385,19.082070471118612?q=Rymarska 4</string>
+
 </resources>

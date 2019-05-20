@@ -188,7 +188,7 @@
                             android:layout_weight="1" />
 
                         <Button
-                            android:id="@+id/button5"
+                            android:id="@+id/explore"
                             style="@android:style/Widget.Button"
                             android:layout_width="50dp"
                             android:layout_height="80dp"
