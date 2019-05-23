@@ -5,6 +5,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -58,7 +59,6 @@ public class MuseumAcitivty extends AppCompatActivity {
                 Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
                 mapIntent.setPackage("com.google.android.apps.maps");
                 startActivity(mapIntent);
-             //   finish();
             }
         });
 
@@ -68,7 +68,6 @@ public class MuseumAcitivty extends AppCompatActivity {
             public void onClick(View v) {
                 String facebookId = "fb://page/111373052221490";
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(facebookId)));
-              //  finish();
             }
         });
 
@@ -76,9 +75,14 @@ public class MuseumAcitivty extends AppCompatActivity {
         show_side.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent explore_to_side = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.zabytkitechniki.pl/Poi/Pokaz/1607/17/punkt-informacji-turystycznej-w-katowicach-nikiszo"));
-                startActivity(explore_to_side);
-              //  finish();
+                try{
+                    Intent explore_to_side = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.zabytkitechniki.pl/Poi/Pokaz/1607/17/punkt-informacji-turystycznej-w-katowicach-nikiszo"));
+                    startActivity(explore_to_side);
+                }catch(Exception e){
+                    e.printStackTrace();
+                    Log.e("Exception","Exception"+e);
+                    finish();
+                }
             }
         });
     }
