@@ -147,7 +147,8 @@
                         <TextView
                             android:id="@+id/show_distance_textView"
                             android:layout_width="150dp"
-                            android:layout_height="40dp"
+                            android:layout_height="32dp"
+                            android:layout_marginTop="10dp"
                             android:gravity="center"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -173,7 +174,7 @@
                             android:id="@+id/explore_to_fb"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginEnd="50dp"
+                            android:layout_marginEnd="80dp"
                             android:layout_marginRight="80dp"
                             android:background="@drawable/iconfb"
                             app:layout_constraintEnd_toStartOf="@+id/explore_to_maps"
@@ -184,7 +185,7 @@
                             android:id="@+id/explore_to_side"
                             android:layout_width="50dp"
                             android:layout_height="50dp"
-                            android:layout_marginStart="50dp"
+                            android:layout_marginStart="80dp"
                             android:layout_marginLeft="80dp"
                             android:background="@drawable/iconbrowser"
                             app:layout_constraintStart_toEndOf="@+id/explore_to_maps"

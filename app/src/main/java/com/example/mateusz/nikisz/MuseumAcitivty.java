@@ -28,6 +28,9 @@ public class MuseumAcitivty extends AppCompatActivity {
     private LocationListener locationListener;
     private Button show_distance;
     private TextView show_distance_textView;
+    private double value1szer =  50.24413278280385;
+    private double value1dl =  19.082070471118612;
+    private double factor = 1e4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +67,7 @@ public class MuseumAcitivty extends AppCompatActivity {
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                show_distance_textView.append("\n "+location.getLatitude()+" "+location.getLongitude());
+                show_distance_textView.append("Odległość wynosi: " +(Math.round(Math.sqrt((Math.pow(value1szer-location.getLatitude(),2)+(Math.pow(value1dl-location.getLongitude(),2)))*73)*factor) / factor)*10 + " km");
             }
 
             @Override
