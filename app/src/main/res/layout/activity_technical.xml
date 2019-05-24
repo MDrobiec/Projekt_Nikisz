@@ -9,13 +9,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <ImageView
             android:id="@+id/imageView4"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            app:srcCompat="@drawable/testnew" />
+            app:srcCompat="@drawable/testnew"
+            android:contentDescription="@string/todo" />
 
         <TextView
             android:id="@+id/museum_textview_top3"
@@ -43,7 +45,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/museum_textview_link" />
+            android:text="@string/line_one" />
 
         <LinearLayout
             android:layout_width="match_parent"

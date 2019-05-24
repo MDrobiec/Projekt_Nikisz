@@ -32,6 +32,7 @@ public class MuseumAcitivty extends AppCompatActivity {
     private double value1dl =  19.082070471118612;
     private double factor = 1e4;
 
+    @SuppressLint("CutPasteId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,7 +52,7 @@ public class MuseumAcitivty extends AppCompatActivity {
         TextView museum_textView_localization_place = findViewById(R.id.museum_textView_localization_place);
         TextView museum_textView_localization_time = findViewById(R.id.museum_textView_localization_time);
         show_distance = findViewById(R.id.show_distance_button);
-        show_distance_textView = findViewById(R.id.show_distance_textView);
+        show_distance_textView = findViewById(R.id.show_distance_button);
 
         museum_textView_topText.setText(rb.getString("museum_textView_topText"));
         museumTextViewSmall.setText(rb.getString("museum_textView_small"));
@@ -62,12 +63,12 @@ public class MuseumAcitivty extends AppCompatActivity {
         museum_textView_localization_place.setText(rb.getString("textView_localization_place"));
         museum_textView_localization_time.setText(rb.getString("museum_textView_localization_time"));
 
-
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                show_distance_textView.append("Odległość wynosi: " +(Math.round(Math.sqrt((Math.pow(value1szer-location.getLatitude(),2)+(Math.pow(value1dl-location.getLongitude(),2)))*73)*factor) / factor)*10 + " km");
+                String text = ("Odległość wynosi: " +(Math.round(Math.sqrt((Math.pow(value1szer-location.getLatitude(),2)+(Math.pow(value1dl-location.getLongitude(),2)))*73)))*10 + " km");
+                show_distance_textView.setText(text);
             }
 
             @Override
@@ -135,7 +136,7 @@ public class MuseumAcitivty extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try{
-                    Intent explore_to_side = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.zabytkitechniki.pl/Poi/Pokaz/1607/17/punkt-informacji-turystycznej-w-katowicach-nikiszo"));
+                    Intent explore_to_side = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.mhk.katowice.pl/index.php/dla-zwiedzajacych/wystawy-stale/21-u-nos-w-doma-na-nikiszu"));
                     startActivity(explore_to_side);
                 }catch(Exception e){
                     e.printStackTrace();
