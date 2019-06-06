@@ -1,9 +1,11 @@
 package com.example.mateusz.nikisz;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -48,6 +50,22 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         home_button_history.setOnClickListener(this);
         home_button_maps.setOnClickListener(this);
         home_button_turistTrail.setOnClickListener(this);
+
+        home_button_maps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try{
+                    Uri gmmIntentUri = Uri.parse("geo:50.24413278280385,19.082070471118612");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                    mapIntent.setPackage("com.google.android.apps.maps");
+                    startActivity(mapIntent);
+                }catch(Exception e){
+                    e.printStackTrace();
+                    Log.e("Exception","Exception"+e);
+                    finish();
+                }
+            }
+        });
     }
     @Override
     public void onClick(View v) {
@@ -57,9 +75,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.home_button_history:
                 open_activity_history();
-                break;
-            case R.id.home_button_maps:
-                open_activity_maps();
                 break;
             case R.id.home_button_museum:
                 open_activity_museum();
@@ -92,10 +107,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     }
     public void open_activity_history(){
         Intent intent = new Intent(this,HistoryActivity.class);
-        startActivity(intent);
-    }
-    public void open_activity_maps(){
-        Intent intent = new Intent(this,MapsActivity.class);
         startActivity(intent);
     }
     public void open_activity_museum(){

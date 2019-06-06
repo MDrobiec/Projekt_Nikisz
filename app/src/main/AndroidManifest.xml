@@ -27,7 +27,6 @@
         <activity android:name=".TechnicalActivity" />
         <activity android:name=".EventActivity" />
         <activity android:name=".HistoryActivity" />
-        <activity android:name=".MapsActivity" />
         <activity android:name=".TrialActivity"></activity>
     </application>
 

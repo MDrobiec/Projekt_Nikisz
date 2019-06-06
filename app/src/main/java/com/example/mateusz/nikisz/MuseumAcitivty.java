@@ -27,7 +27,6 @@ public class MuseumAcitivty extends AppCompatActivity {
     private LocationManager locationManager;
     private LocationListener locationListener;
     private Button show_distance;
-    private TextView show_distance_textView;
     private double value1szer =  50.24413278280385;
     private double value1dl =  19.082070471118612;
     private double factor = 1e4;
@@ -52,7 +51,6 @@ public class MuseumAcitivty extends AppCompatActivity {
         TextView museum_textView_localization_place = findViewById(R.id.museum_textView_localization_place);
         TextView museum_textView_localization_time = findViewById(R.id.museum_textView_localization_time);
         show_distance = findViewById(R.id.show_distance_button);
-        show_distance_textView = findViewById(R.id.show_distance_button);
 
         museum_textView_topText.setText(rb.getString("museum_textView_topText"));
         museumTextViewSmall.setText(rb.getString("museum_textView_small"));
@@ -67,8 +65,8 @@ public class MuseumAcitivty extends AppCompatActivity {
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                String text = ("Odległość wynosi: " +(Math.round(Math.sqrt((Math.pow(value1szer-location.getLatitude(),2)+(Math.pow(value1dl-location.getLongitude(),2)))*73)))*10 + " km");
-                show_distance_textView.setText(text);
+                String text = ("Odległość wynosi: " +(Math.round(Math.sqrt((Math.pow(value1szer-location.getLatitude(),2)+(Math.pow(value1dl-location.getLongitude(),2)))*73)*factor)/factor)*10 + " km");
+                show_distance.setText(text);
             }
 
             @Override
