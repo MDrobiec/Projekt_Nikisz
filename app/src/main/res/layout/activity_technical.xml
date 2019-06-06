@@ -20,28 +20,26 @@
             android:contentDescription="@string/todo" />
 
         <TextView
-            android:id="@+id/museum_textview_top3"
+            android:id="@+id/technical_textView_top"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:gravity="center"
-            android:text="@string/technical_texvview_top"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="#000000"
             android:textSize="35sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/museum_textview_top_small3"
+            android:id="@+id/technical_textView_small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="@string/technical_textview_top_small"
             android:textSize="25sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/museum_textview_link3"
+            android:id="@+id/technical_textiew_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -62,16 +60,18 @@
                     android:orientation="vertical" >
 
                     <TextView
-                        android:id="@+id/textView8"
+                        android:id="@+id/technical_textView_small_info"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="17dp"
                         android:layout_marginTop="10dp"
                         android:layout_marginRight="17dp"
-                        android:gravity="left"
-                        android:text="Obiekty znadujące się na osiedlu i w jego obrębie"
+                        android:gravity="center"
                         android:textColor="#000000"
-                        android:textSize="18dp" />
+                        android:textSize="18sp"
+                        tools:ignore="RtlHardcoded"
+                        android:layout_marginBottom="15dp"
+                        android:textStyle="bold" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -79,31 +79,41 @@
                         android:orientation="horizontal">
 
                         <Button
-                            android:id="@+id/button"
+                            android:id="@+id/technical_button_eststeNikiszowiec"
                             android:layout_width="350dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="15dp"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:background="@drawable/nikisz"
+                            android:layout_marginStart="15dp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginStart="15dp">
 
                             <TextView
-                                android:id="@+id/textView"
+                                android:id="@+id/technical_textView_estateNikiszowiec"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="TextView" />
+                                android:gravity="center"
+                                tools:ignore="NestedWeights"
+                                android:textStyle="bold"
+                                android:textSize="18sp"/>
 
                             <TextView
-                                android:id="@+id/textView7"
+                                android:id="@+id/technical_textView_estateNikiszowiec_distance"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="TextView" />
+                                android:text="12.158 km"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:gravity="center"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -111,34 +121,45 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp">
 
                         <Button
-                            android:id="@+id/button2"
+                            android:id="@+id/technical_button_wilson"
+                            android:background="@drawable/wilson"
                             android:layout_width="350dp"
-                            android:layout_height="wrap_content"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="15dp"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:layout_marginStart="15dp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginStart="15dp">
 
                             <TextView
-                                android:id="@+id/textView2"
+                                android:id="@+id/technical_textView_wilson"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="TextView" />
+                                android:gravity="center"
+                                tools:ignore="NestedWeights"
+                                android:textStyle="bold"
+                                android:textSize="18sp"/>
 
                             <TextView
-                                android:id="@+id/textView6"
+                                android:id="@+id/technical_textView_wilson_distance"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="TextView" />
+                                android:text="12.158 km"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:gravity="center"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -153,7 +174,7 @@
                             android:layout_width="350dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:text="KOPALNIA WIECZOREK" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -188,7 +209,7 @@
                             android:layout_width="350dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:text="OSIEDLE GISZOWIEC" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -223,7 +244,7 @@
                             android:layout_width="350dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="Button" />
+                            android:text="FABRYKA PORCELANY" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
