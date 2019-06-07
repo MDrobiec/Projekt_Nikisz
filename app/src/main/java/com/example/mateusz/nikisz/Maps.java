@@ -15,6 +15,10 @@ public class Maps extends AppCompatActivity {
 
     public LocationManager locationManager;
     public LocationListener locationListener;
+    private double szerokosc;
+    private double wysokosc;
+    private double wynik;
+    private double factor = 1e4;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,9 +28,9 @@ public class Maps extends AppCompatActivity {
         locationListener = new LocationListener() {
             @Override
             public void onLocationChanged(Location location) {
-                location.getLatitude();
-                location.getLongitude();
-                String text = "punkty wynoszą:" + location.getLatitude() + " " + location.getLongitude();
+               szerokosc = location.getLatitude();
+               wysokosc = location.getLongitude();
+               wynik = ((Math.round(Math.sqrt((Math.pow(value1szer-location.getLatitude(),2)+(Math.pow(value1dl-location.getLongitude(),2)))*73)*factor)/factor)*10);
             }
 
             @Override
